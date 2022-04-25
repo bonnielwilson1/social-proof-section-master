@@ -1,0 +1,53 @@
+/* 
+- Mobile: 375px
+- Desktop: 1440px
+- Font size: 15px
+- Family: [Spartan](https://fonts.google.com/specimen/Spartan)
+- Weights: 400, 500, 700 */
+
+:root {
+    --magenta: hsl(300, 43%, 22%);
+    --soft_pink: hsl(333, 80%, 67%);
+    --white: hsl(0, 0%, 100%);
+    --dark_gray_magenta: hsl(303, 10%, 53%);
+    --light-grayish-magenta: hsl(300, 24%, 96%);
+
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'League Spartan', sans-serif;
+}
+h1 {
+    color: var(--magenta);
+}
+.rating {
+    background-color: var(--light-grayish-magenta);
+}
+.card {
+    background-color: var(--magenta);
+}
+p {
+    color: var(--dark_gray_magenta); 
+}
+h2 {
+    color: var(--light-grayish-magenta);
+}
+h3 {
+    color: var(--soft_pink);
+}
+img {
+    border-radius: 50%;
+}
+.blurb {
+    color: var(--magenta);
+}
+
+main {
+    background-color: var(--light-grayish-magenta);
+    width: 40%;
+}
+
