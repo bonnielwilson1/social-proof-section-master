@@ -21,26 +21,28 @@
     box-sizing: border-box;
     font-family: 'League Spartan', sans-serif;
 }
-html {
-    background-image: url(images/bg-pattern-top-mobile.svg);
-    background-image: url(images/bg-pattern-bottom-desktop.svg);
-}
 body {
-    background-color: var(--white);
-    margin: 20% auto;
+    background:  url(images/bg-pattern-top-mobile.svg) top left no-repeat, 
+    url(images/bg-pattern-bottom-desktop.svg) bottom right no-repeat; 
+    padding: 0;
+    margin: 0;
+   
 
 }
 
 main {
     max-width: 350px;
-    margin: 0 auto;
+    width: 100%;
+    margin: 5% auto;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    padding: 4rem 0rem;
     
 }
 
-h1 {
+.heading-section h1 {
     color: var(--magenta);
     font-size: 2rem;
     text-align: center;
@@ -54,14 +56,17 @@ h1 {
     letter-spacing: 0.2px;
     margin-bottom: 1.5rem;
     line-height: 1.5rem;
+    color: var(--dark_gray_magenta); 
+
 }
 .rating-section {
     margin-bottom: 2rem;
+    width: 100%;
 }
 .rating {
     background-color: var(--light-grayish-magenta);
-    padding: 1rem 3rem;
-    margin-bottom:0.7rem;
+    padding: 0.75rem 2.5rem;
+    margin-bottom:0.6rem;
     border-radius: 0.3rem;
     text-align: center;
 }
@@ -69,11 +74,18 @@ h1 {
     letter-spacing: 0.2rem;
     padding-bottom: 0.5rem;
 }
+.blurb {
+    color: var(--magenta);
+    font-size: 0.75rem;
+    font-weight: 700;
+    opacity: 80%;
+    
+}
 .card {
     background-color: var(--magenta);
     border-radius:0.3rem ;
     margin-bottom: 1rem;
-    padding: 2rem;
+    padding: 2rem 1.5rem;
    
 }
 
@@ -102,89 +114,83 @@ h1 {
 }
 .card p {
     color: white;
-    font-size: 0.85rem;
-    letter-spacing: 0.4px;
+    opacity: 70%;
+    font-size: 0.76rem;
     line-height: 1.3rem;
-
-}
-p {
-    color: var(--dark_gray_magenta); 
-}
-h2 {
-    color: var(--light-grayish-magenta);
-}
-h3 {
-    color: var(--soft_pink);
 }
 img {
     border-radius: 50%;
     
 }
-.blurb {
-    color: var(--magenta);
-    font-size:0.9rem;
-    font-weight: 700;
-    opacity: 80%;
-    
-}
+
 
 @media (min-width: 1050px) {
-    html {
-        background: url(images/bg-pattern-bottom-desktop.svg); 
-        background: url(images/bg-pattern-top-desktop.svg);
-        background-position: 0 0, left, right;
-        margin: 0;
+    body {
+        background:  url(images/bg-pattern-top-desktop.svg) top left no-repeat, 
+        url(images/bg-pattern-bottom-desktop.svg) bottom right no-repeat; 
         padding: 0;
+        margin: 0;
     }
 
     main {
-        margin: 0 10%;
         display: flex;
-        justify-content: space-between;
         flex-flow: row wrap;
+        justify-content: space-between;
+        width: 100%;
         max-width: 1200px;
-
+        margin: 5% auto;
+        padding: 0;
+        }
         
-    }
 
     .heading-section { 
-        flex-basis: 38%;
+        display: flex;
+        flex-flow: column;
         text-align: left;
+        flex-basis: 40%;
     }
     .heading-section h1 {
         text-align: left;
-        font-size: 3rem;
+        font-size: 3.5rem;
         margin-bottom: 0.5rem;
-        line-height: 3rem;
+        line-height: 3.3rem;
     }
     .heading-section p {
         text-align: left;
+        font-size: 1.3rem;
+        line-height: 2rem;
+        margin-top: 1rem;
     }
 
     /* Rating Section, rating boxes */
 
     .rating-section {
-        display: inline-block;
-        
-
+        margin-top: 2rem;
+        flex-basis: 40%;
+        align-items: center;
+    
     }
     .rating{
     
         align-items: center;
-        padding: 1rem 1rem;
+        padding: 1.2rem 1rem 1.2rem 1.5rem;
         margin-bottom: 1rem;
+
         justify-content: flex-start;
         text-align: left;
         width: 400px;
+        
     
     }
 
     .stars {
         letter-spacing: 0.2rem;
-        padding-bottom: 0;
+        padding: 0;
         flex-basis: 30%;
         display: inline-block;
-        margin-right: 30px;
+        margin-right: 20px;
+        font-size: 1.3rem;
+        
         
     }
 
@@ -192,6 +198,7 @@ img {
         padding: 0;
         margin: 0;
         display: inline-block;
+        font-size: 1rem;
     }
 
     .rating-section .second {
